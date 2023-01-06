@@ -10,6 +10,7 @@ import Detail from "./pages/Detail";
 import AddEditBlog from "./pages/AddEditBlog";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import ContactUsPage from "./pages/ContactUs";
 import Header from "./components/Header";
 import Auth from "./pages/Auth";
 import { auth } from "./firebase";
@@ -64,6 +65,7 @@ function App() {
           }
         />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/auth" element={<Auth setActive={setActive} setUser={setUser} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

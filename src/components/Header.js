@@ -58,6 +58,16 @@ const Header = ({ active, setActive, user, handleLogout }) => {
                     About
                   </li>
                 </Link>
+                <Link to="/contact" style={{ textDecoration: "none" }}>
+                  <li
+                    className={`nav-item nav-link ${
+                      active === "contact" ? "active" : ""
+                    }`}
+                    onClick={() => setActive("contact")}
+                  >
+                    Contact Us
+                  </li>
+                </Link>
               </ul>
               <div className="row g-3">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">

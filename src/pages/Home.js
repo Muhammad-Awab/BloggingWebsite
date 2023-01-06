@@ -83,7 +83,7 @@ const Home = ({ setActive, user }) => {
     <div className="container-fluid pb-4 pt-4 padding">
       <div className="container padding">
         <div className="row mx-0">
-          <Trending blogs={trendBlogs} />
+          {/* <Trending blogs={trendBlogs} /> */}
           <div className="col-md-8">
             <BlogSection
               blogs={blogs}
