@@ -1,7 +1,6 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
 import { Link } from "react-router-dom";
-import { excerpt } from "../utility";
 
 const BlogSection = ({ blogs, user, handleDelete }) => {
   const userId = user?.uid;

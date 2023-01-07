@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import transitions from "bootstrap";
 
 const Header = ({ active, setActive, user, handleLogout }) => {
   const userId = user?.uid;
@@ -8,7 +7,9 @@ const Header = ({ active, setActive, user, handleLogout }) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid bg-faded padding-media">
         <div className="container padding-media">
+         
           <nav className="navbar navbar-toggleable-md navbar-light">
+    <span class="navbar-brand mb-0 h1">Blogging</span>
             <button
               className="navbar-toggler mt-3"
               type="button"

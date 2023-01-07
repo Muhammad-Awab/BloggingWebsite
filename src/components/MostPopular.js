@@ -13,13 +13,7 @@ const MostPopular = ({ blogs }) => {
           style={{ cursor: "pointer" }}
           onClick={() => navigate(`/detail/${item.id}`)}
         >
-          <div className="col-5 align-self-center">
-            <img
-              src={item.imgUrl}
-              alt={item.title}
-              className="most-popular-img"
-            />
-          </div>
+          
           <div className="col-7 padding">
             <div className="text-start most-popular-font">{item.title}</div>
             <div className="text-start most-popular-font-meta">

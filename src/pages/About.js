@@ -1,33 +1,31 @@
-import React from "react";
-
+import React, { useState } from 'react'
+import serviceapi from '../API/serviceApi';
 const About = () => {
-  return (
-    <div className="container padding">
-      <div className="col-md-12">
-        <div className="row mx-0">
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots in a piece of classical Latin literature from 45 BC,
-            making it over 2000 years old. Richard McClintock, a Latin professor
-            at Hampden-Sydney College in Virginia, looked up one of the more
-            obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-            going through the cites of the word in classical literature,
-            discovered the undoubtable source. Lorem Ipsum comes from sections
-            1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-            of Good and Evil) by Cicero, written in 45 BC. This book is a
-            treatise on the theory of ethics, very popular during the
-            Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
-            amet..", comes from a line in section 1.10.32. The standard chunk of
-            Lorem Ipsum used since the 1500s is reproduced below for those
-            interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et
-            Malorum" by Cicero are also reproduced in their exact original form,
-            accompanied by English versions from the 1914 translation by H.
-            Rackham.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+    const [serviceData] = useState(serviceapi);
+    return (
+        <>
+            <section className="service-main-container ">
+                <div className="container service-container">
+                    <h1 className="main-heading text-center ">Topics Of our Blog </h1>
+                    <div className="row">
+                        {
+                            serviceData.map((curElem) => {
+                                const { id, logo, title, info } = curElem;
+                                return (
+                                    <div className="col-11 col-lg-4 col-xx-4 work-container-subdiv" key={id}>
+                                        <i className={`fontawesome-style ${logo}`}></i>
+                                        <h3 className='sub-heading'>{title}</h3>
+                                        <p className='main-hero-para'>
+                                            {info}
+                                        </p>
+                                    </div>
+                                )
+                            })}
+                    </div>
+                </div>
+            </section>
+        </>
+    )
+}
 
 export default About;

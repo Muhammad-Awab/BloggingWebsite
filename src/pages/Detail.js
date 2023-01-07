@@ -38,16 +38,9 @@ const Detail = ({ setActive }) => {
   };
   return (
     <div className="single">
-      <div
-        className="blog-title-box"
-        style={{ backgroundImage: `url('${blog?.imgUrl}')` }}
-      >
-        <div className="overlay"></div>
-        <div className="blog-title">
-          <span>{blog?.timestamp.toDate().toDateString()}</span>
-          <h2>{blog?.title}</h2>
-        </div>
-      </div>
+      
+       
+          <h1 className="fw-bolder mt-5">{blog?.title}</h1>
       <div className="container-fluid pb-4 pt-4 padding blog-single-content">
         <div className="container padding">
           <div className="row mx-0">
